@@ -578,7 +578,7 @@ a {
 .logo_bottom::before {
 	content: " ";
 	width: 196px;
-	height: 40px;
+	height: 60px;
 	position: absolute;
 	background: linear-gradient(to right, #1e1e1e 20%, transparent 80%);
 }
@@ -587,8 +587,8 @@ a {
 .logo_bottom::after {
 	content: " ";
 	width: 196px;
-	height: 40px;
-	right: 0;
+	height: 60px;
+	right: 312px;
 	position: absolute;
 	background: linear-gradient(to left, #1e1e1e 20%, transparent 80%);
 }
@@ -601,7 +601,7 @@ a {
 /* points */
 
 .points {
-	
+
 	display: flex;
 	justify-content: center;
 	margin: 26px auto;
@@ -609,7 +609,7 @@ a {
 	display: none;
 }
 
-.active{
+.active {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
@@ -617,19 +617,21 @@ a {
 }
 
 .dot {
-	cursor:pointer;
+	cursor: pointer;
 	display: inline-block;
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background-color: #525252;;
+	background-color: #525252;
+	;
 }
 
 .dot:not(:first-child) {
 	margin-left: 8px;
 }
 
-.prev, .next {
+.prev,
+.next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -641,53 +643,69 @@ a {
 	font-size: 18px;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
-  }
-  
-  /* 定位 "下一张" 按钮靠右 */
-  .next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
-  }
+}
 
-  /* 定位 "下一张" 按钮靠右 */
-  .next {
+/* 定位 "下一张" 按钮靠右 */
+.next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0.8);
-  }
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 定位 "下一张" 按钮靠右 */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media screen and (max-width:1296px) {
+	.logo_top::after,
+	.logo_bottom::after {
+		right: 0;
+	}
+}
+
 
 @media screen and (max-width:376px) {
 	.points {
 		display: flex;
 	}
 
-	.section3_container ul li{
+	.section3_container ul li {
 		flex-direction: column;
 		box-sizing: border-box;
 		height: 100%;
 	}
 
-	.share_card{
+	.share_card {
 		flex-grow: 1;
 		flex-shrink: 0;
 	}
 
 	.section3_container {
 		margin-top: 28px;
+		margin-bottom: 120px;
 	}
 
 	.section3_logo img {
 		width: 30%;
-		margin-right: 20px;
+		margin-right: 17px;
+	}
+
+	.section3_logo{
+		margin-bottom: 48px;
 	}
 
 	.logo_img {
@@ -695,12 +713,14 @@ a {
 		overflow-x: auto;
 	}
 
-	.logo_img::before {
+	.logo_top::after,
+	.logo_bottom::after  {
 		height: 200px;
 	}
 
-	.logo_img::after {
-		height: 200px;
+	.logo_top::after,
+	.logo_bottom::after  {
+		height: 40px;
 	}
 }
 
@@ -788,6 +808,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 
@@ -891,7 +912,9 @@ a {
 		font-size: 32px;
 	}
 
-
+	.container{
+		padding: 80px 0px;
+	}
 
 	.fileter ul {
 		width: 100%;
